@@ -17,8 +17,11 @@
                             <i class="fa fa-sun-o" aria-hidden="true"></i>
                         </button>
                     </li>
-                    <li class="lg:hidden">
-                        <button>
+                    <li id="menuToggle" class="lg:hidden menu-button">
+                        <button id="closeBtn" class="hidden">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                        <button id="openBtn">
                             <i class="fa fa-bars" aria-hidden="true"></i>
                         </button>
                     </li>
@@ -44,7 +47,10 @@
                 </ul>
             </div>
             <!-- mobile nav-overlay -->
-            <!-- <div class="nav-overlay pt-[20px] h-dvh lg:hidden">
+            <div
+                id="menu-open"
+                class="nav-overlay hidden pt-[20px] h-dvh lg:hidden"
+            >
                 <div class="pt-[10px]">
                     <div
                         class="py-[20px] flex gap-[20px] items-center justify-between text-[14px] leading-[22.4px] md:text-[16px] md:leading-[25.6px]"
@@ -65,13 +71,29 @@
                         </a>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </nav>
     </div>
 </header>
 
 <script>
+    const menuToggle = document.querySelector("#menuToggle");
+    
+    menuToggle.addEventListener("click", () => {
+        const showMenu = document.querySelector("#menu-open");
+        const openBtn = document.querySelector('#openBtn')
+        const closeBtn = document.querySelector('#closeBtn')
 
+        if (showMenu.style.display === "block") {
+            showMenu.style.display = "none"
+            closeBtn.style.display = 'none'
+            openBtn.style.display = 'inline'
+        } else {
+            showMenu.style.display = "block"
+            closeBtn.style.display = 'inline'
+            openBtn.style.display = 'none'
+        }
+    });
 </script>
 
 <style>
