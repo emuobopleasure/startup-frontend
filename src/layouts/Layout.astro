@@ -32,17 +32,33 @@ const { title } = Astro.props;
 		/>
 		<title>{title}</title>
 	</head>
-	<body>
+	<body id="pageBody" class="darkBg">
 		<NavBar />
 		<slot />
 		<script
 			is:inline
 			src="https://kit.fontawesome.com/3f72f7b724.js"
 			crossorigin="anonymous"></script>
+		<script>
+			// const themeToggle = document.querySelector('#themeToggle')
+			// console.log(themeToggle, 'tt')
+
+			// themeToggle.addEventListener('click', () => {
+			// 	const pageBody = document.querySelector('#pageBody')
+			// 	pageBody.classList.toggle('whiteBg')
+
+				// if (pageBody.classList.contains('darkBg')) {
+				// 	pageBody.classList.add('whiteBg')
+				// } else {
+				// 	pageBody.classList.add('darkBg')
+				// }
+
+			// })
+		</script>
 	</body>
 </html>
 <style is:global>
-	:root {
+	/* :root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
@@ -52,19 +68,31 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
-	}
-	html {
+	} */
+	/* html {
 		font-family: system-ui, sans-serif;
 		background: #111;
 		background-size: 224px;
+	} */
+
+	.whiteBg {
+		background-color: #ffffff;
+		color: #111;
 	}
+
+	/* .darkBg {
+		background-color: #111;
+	} */
 
 	body {
 		padding: 0;
 		margin: 0;
 		font-family: "Livvic", sans-serif;
+		background: #111;
+		color: white;
+		transition: background-color 0.3s ease;
 	}
-	code {
+	/* code {
 		font-family:
 			Menlo,
 			Monaco,
@@ -74,9 +102,9 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
-	}
+	} */
 
-	textarea{
+	textarea {
 		resize: none;
 	}
 </style>
