@@ -1,7 +1,6 @@
-<header
-    class="header text-white bg-[#111] p-[1.25rem] z-10 fixed top-0 w-full lg:w-full xl:px-[10.2rem] 2xl:px-[18.2rem] lg:py-[1.5rem] shadow-[#0e0e0e] shadow-md"
+<header id="navBg" class="header text-white bg-[#111] p-[1.25rem] z-10 fixed top-0 w-full lg:w-full xl:px-[10.2rem] 2xl:px-[18.2rem] lg:py-[1.5rem] shadow-[#0e0e0e] shadow-md"
 >
-    <div class="nav-container max-w-[60rem] mx-auto text-white">
+    <div class="nav-container max-w-[60rem] mx-auto">
         <nav class="">
             <div class="nav-div flex justify-between items-center">
                 <h1
@@ -13,8 +12,11 @@
                     class="menu-list flex items-center lg:flex-row-reverse gap-[1.5rem]"
                 >
                     <li id="themeToggle">
-                        <button>
+                        <button class="sunBtn">
                             <i class="fa fa-sun-o" aria-hidden="true"></i>
+                        </button>
+                        <button class="moonBtn hidden">
+                            <i class="fa fa-moon-o" aria-hidden="true"></i>
                         </button>
                     </li>
                     <li id="menuToggle" class="lg:hidden menu-button">
@@ -31,7 +33,7 @@
                     >
                         <a href="">
                             <button
-                                class="bg-[#222] px-[10px] py-[5px] rounded-md"
+                                class="buttonTheme learn-btn bg-[#222] px-[10px] py-[5px] rounded-md"
                             >
                                 Start Innovating Now
                             </button>
@@ -57,7 +59,7 @@
                     >
                         <a href="" class="w-full">
                             <button
-                                class="bg-[#222] py-[5px] px-[10px] h-[35px] w-full rounded-md"
+                                class="buttonTheme bg-[#222] py-[5px] px-[10px] h-[35px] w-full rounded-md"
                             >
                                 Start Innovating Now
                             </button>
@@ -96,75 +98,3 @@
     });
 </script>
 
-<style>
-    .nav-container {
-        /* padding: 0.5rem 0;
-        color: white;
-        z-index: 10;
-        position: fixed;
-        width: 90%;
-        background-color: #111;
-        height: 4rem; */
-    }
-
-    /* @media screen and (min-width: 992px) {
-        .nav-container {
-            width: 99vw;
-            padding: 0 4rem;
-        }
-    } */
-
-    /* header {
-        display: flex;
-        justify-content: center;
-        box-shadow: 0px 10px 5px 0px yellow;
-    } */
-
-    header {
-        /* outline: 1px solid red; */
-    }
-
-    nav {
-        /* display: flex;
-        justify-content: center; */
-    }
-
-    /* .nav-div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    @media screen and (min-width: 992px) {
-        .nav-div {
-            padding: 0 12rem;
-        }
-    }
-
-    .nav-div ul {
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .nav-div button {
-        all: unset;
-    } */
-
-    /* .menu-list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    } */
-
-    /* h1 {
-        font-weight: 100;
-        font-size: 1rem;
-        letter-spacing: -0.03em;
-    }
-
-    h1 a {
-        all: unset;
-    } */
-</style>
