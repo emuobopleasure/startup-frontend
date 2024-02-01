@@ -43,10 +43,10 @@ const { title } = Astro.props;
 			const themeToggle = document.querySelector('#themeToggle')
 			console.log(themeToggle, 'tt')
 
-			// const otherThemeChange = document.querySelector('#otherThemeChange')
 
 			themeToggle.addEventListener('click', () => {
 				const pageBody = document.querySelector('#pageBody')
+				
 				pageBody.classList.toggle('whiteBg')
 				const aboutText = document.querySelector('#aboutText')
 				const aboutParagrapgh = document.querySelector('#aboutParagrapgh')
