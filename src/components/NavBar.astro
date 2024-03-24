@@ -1,4 +1,6 @@
-<header id="navBg" class="header text-white bg-[#111] p-[1.25rem] z-10 fixed top-0 w-full lg:w-full xl:px-[10.2rem] 2xl:px-[18.2rem] lg:py-[1.5rem] shadow-[#0e0e0e] shadow-md"
+<header
+    id="navBg"
+    class="header text-white bg-[#111] p-[1.25rem] z-10 fixed top-0 w-full lg:w-full xl:px-[10.2rem] 2xl:px-[18.2rem] lg:py-[1.5rem] shadow-[#0e0e0e] shadow"
 >
     <div class="nav-container max-w-[60rem] mx-auto">
         <nav class="">
@@ -33,14 +35,14 @@
                     >
                         <a href="">
                             <button
-                                class="buttonTheme learn-btn bg-[#222] px-[10px] py-[5px] rounded-md"
+                                class="buttonTheme learn-btn bg-[#222] px-[10px] py-[5px] rounded-md blackBtnHover"
                             >
                                 Start Innovating Now
                             </button>
                         </a>
                         <a href="">
                             <button
-                                class="bg-[#FFCC00] px-[10px] py-[5px] rounded-md text-[#111]"
+                                class="bg-[#FFCC00] px-[10px] py-[5px] rounded-md text-[#111] yellowBtnHover"
                             >
                                 Start Saving Time!
                             </button>
@@ -83,18 +85,17 @@
 
     menuToggle.addEventListener("click", () => {
         const showMenu = document.querySelector("#menu-open");
-        const openBtn = document.querySelector('#openBtn')
-        const closeBtn = document.querySelector('#closeBtn')
+        const openBtn = document.querySelector("#openBtn");
+        const closeBtn = document.querySelector("#closeBtn");
 
         if (showMenu.style.display === "block") {
-            showMenu.style.display = "none"
-            closeBtn.style.display = 'none'
-            openBtn.style.display = 'inline'
+            showMenu.style.display = "none";
+            closeBtn.style.display = "none";
+            openBtn.style.display = "inline";
         } else {
-            showMenu.style.display = "block"
-            closeBtn.style.display = 'inline'
-            openBtn.style.display = 'none'
+            showMenu.style.display = "block";
+            closeBtn.style.display = "inline";
+            openBtn.style.display = "none";
         }
     });
 </script>
-

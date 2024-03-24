@@ -62,6 +62,7 @@ const { title } = Astro.props;
 				const footerTop = document.querySelector('.footer-top')
 				const moonBtn = document.querySelector('.moonBtn')
 				const sunBtn = document.querySelector('.sunBtn')
+				const appsSimplifyText = document.querySelector('.appSimplifyText')
 				// console.log(buttonTheme, 'mm')
 
 				if (pageBody.classList.contains('whiteBg')) {
@@ -75,7 +76,7 @@ const { title } = Astro.props;
 				if (pageBody.classList.contains('whiteBg')) {
 					navBg.style.backgroundColor = '#ffffff'
 					navBg.style.color = '#111'
-					navBg.style.boxShadow = '0px 5px 10px whitesmoke'
+					navBg.style.boxShadow = '0px 1px 3px whitesmoke'
 					aboutText.style.backgroundColor = '#EEE'
 					aboutParagrapgh.style.color = '#666'
 					// buttonTheme.style.backgroundColor = '#eee'
@@ -87,6 +88,7 @@ const { title } = Astro.props;
 					inputBg.style.backgroundColor = '#ffffff'
 					inputBg.style.border = '#eee'
 					footerTop.style.borderBottom = '1px solid #eee'
+					appsSimplifyText.style.color = '#666'
 				} else {
 					navBg.style.backgroundColor = '#111111'
 					navBg.style.color = '#ffffff'
@@ -102,6 +104,7 @@ const { title } = Astro.props;
 					inputBg.style.backgroundColor = '#111'
 					inputBg.style.border = '#111'
 					footerTop.style.borderBottom = '1px solid #222'
+					appsSimplifyText.style.color = '#111'
 				}
 
 				featuresCard.forEach((el) => {
@@ -186,19 +189,18 @@ const { title } = Astro.props;
 		color: white;
 		transition: background-color 0.3s ease;
 	}
-	/* code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	} */
 
 	textarea {
 		resize: none;
 	}
+
+	.blackBtnHover:hover {
+		background-color: #1c1c1c;
+		color: #b8b8b8;
+	}
+
+	.yellowBtnHover:hover {
+		background-color: #b89405;
+	}
+
 </style>
